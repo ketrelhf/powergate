@@ -29,7 +29,7 @@ services:
       - powergate-lotus:/root/lotus
   
   lotus:
-    image: textile/lotus:${LOTUS_IMAGE_TAG}
+    image: textile/lotus:latest
     volumes:
       - powergate-lotus:/data
     environment:
