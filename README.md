@@ -177,6 +177,16 @@ Usage of powd:
       --repopath string                  Path of the repository where Powergate state will be saved. (default "~/.powergate")
       --walletinitialfund int            FFS initial funding transaction amount in attoFIL received by --lotusmasteraddr. (if set) (default 250000000000000000)
 ```
+## Litenode mode
+Maintaining fully synchronized Lotus nodes can require significant time and effort. We support litenode in lotus to make it possible to run without running a full node.
+
+If you’re interested in running Powergate and experiment with the CLI, the fastest way is to replace the Lotus client dependency with a running litenode, which runs a local Lotus client connected to a network with local miners.
+
+A simple docker-compose setup is available that will run Powergate connected to a Lotus local network with 512Mib sectors and allows to use the gRPC API or CLI without any extra config flags! 🎊 Note: you will first need to install Docker compose in order to get started.
+```
+cd docker
+make litenode
+```
 
 ## Localnet mode
 
