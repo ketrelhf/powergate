@@ -17,6 +17,7 @@ Join us on our [public Slack channel](https://slack.textile.io/) for news, discu
 -   [Prerequisites](#prerequisites)
 -   [Design](#design)
 -   [Installation](#installation)
+-   [Lotus litenode mode](#litenode-mode)
 -   [Localnet mode](#localnet-mode)
 -   [Production setup](#production-setup)
 -   [Tests](#tests)
