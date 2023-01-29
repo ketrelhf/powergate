@@ -17,6 +17,30 @@ localnet:
 		up --build -V
 .PHONY: localnet
 
+litenode-down: 
+	DOCKER_BUILDKIT=1 \
+	BIGSECTORS=true \
+	docker-compose -p localnet \
+		-f docker-compose-litenode.yaml \
+		-f ipfs-image.yaml \
+		-f powergate-build-context.yaml \
+                -f lotus-litenode-build-context.yaml \
+		down
+.PHONY: litenode-down
+
+litenode: 
+	DOCKER_BUILDKIT=1 \
+	BIGSECTORS=true \
+	docker-compose -p localnet \
+		-f docker-compose-litenode.yaml \
+		-f ipfs-image.yaml \
+		-f powergate-build-context.yaml \
+                -f lotus-litenode-build-context.yaml \
+		up --build -V
+.PHONY: litenode
+
+
+
 
 up: down
 	DOCKER_BUILDKIT=1 \
